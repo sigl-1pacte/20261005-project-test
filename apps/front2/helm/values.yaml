@@ -1,0 +1,16 @@
+workload:
+  name: front2
+replicaCount: 1
+labels:
+  classification: public
+  environment: prod
+  team: 20261005-team
+service:
+  port: 80
+  targetPort: 80
+container:
+  port: 80
+resources:
+  requests:
+    cpu: 500m
+    memory: 512Mi
