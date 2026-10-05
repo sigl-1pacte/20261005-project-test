@@ -1,0 +1,79 @@
+{
+  "argocd": {
+    "autoSync": true,
+    "enabled": true,
+    "prune": false,
+    "repositoryTarget": "",
+    "revision": "main",
+    "selfHeal": true
+  },
+  "database": {},
+  "description": "",
+  "environments": [
+    "prod"
+  ],
+  "features": {
+    "ci": true,
+    "envConfig": false,
+    "logger": false,
+    "yamlConfig": false
+  },
+  "helm": {
+    "appPort": 5173,
+    "config": {
+      "logLevel": "INFO"
+    },
+    "enabled": true,
+    "host": "front2.20261005-project-test.cnp.1pacte.tech",
+    "ingressEnabled": true,
+    "replicas": 1,
+    "resources": {
+      "requests": {
+        "cpu": "500m",
+        "memory": "512Mi"
+      }
+    },
+    "servicePort": 5173,
+    "tlsEnabled": false
+  },
+  "kind": "service",
+  "observability": {
+    "backend": "loki",
+    "collector": "alloy",
+    "grafana": {
+      "dashboardUid": "",
+      "datasource": "Loki",
+      "folderName": "",
+      "folderTitle": "",
+      "path": "",
+      "provisioning": "grafana-operator",
+      "teamSubspacePath": ""
+    },
+    "labelSelector": "",
+    "logsEnabled": false,
+    "requiredPodLabels": {}
+  },
+  "owner": "",
+  "projectName": "front2",
+  "projectSlug": "20261005-project-test",
+  "repository": {
+    "githubOrg": "sigl-1pacte",
+    "private": false
+  },
+  "routing": {
+    "reason": "No sensitive data declared; AWS EKS is the public managed cluster target.",
+    "targetCluster": "aws-eks"
+  },
+  "security": {
+    "containsSensitiveData": false,
+    "dataClassification": "public",
+    "publicExposure": true,
+    "requiresSecrets": false
+  },
+  "teamName": "20261005-team",
+  "template": {
+    "appType": "vite-react",
+    "framework": "vite-react",
+    "language": "typescript"
+  }
+}
